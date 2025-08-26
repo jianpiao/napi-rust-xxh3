@@ -32,5 +32,7 @@
     "test": "ava",
     "universal": "napi universal",
     "version": "napi version"
-  }
+  },
+  "description": "rust生成xxh3值",
+  "repository": "https://github.com/jianpiao/napi-rust-xxh3"
 }
