@@ -1,5 +1,5 @@
 {
-  "name": "@small-zip/md5-darwin-x64",
+  "name": "@small-zip/xxh3-darwin-x64",
   "version": "0.0.16",
   "os": [
     "darwin"
@@ -7,14 +7,14 @@
   "cpu": [
     "x64"
   ],
-  "main": "md5.darwin-x64.node",
+  "main": "xxh3.darwin-x64.node",
   "files": [
-    "md5.darwin-x64.node"
+    "xxh3.darwin-x64.node"
   ],
-  "description": "rust生成md5值",
+  "description": "rust生成xxh3值",
   "license": "MIT",
   "engines": {
     "node": ">= 10"
   },
-  "repository": "https://github.com/jianpiao/rust-md5"
+  "repository": "https://github.com/jianpiao/napi-rust-xxh3"
 }

@@ -1,5 +1,5 @@
 import test from 'ava';
-import { md5 } from '../index.js';
+import { xxh3 } from '../index.js';
 import { writeFile, unlink } from 'fs/promises';
 import { join } from 'path';
 import { fileURLToPath } from 'url';
@@ -9,7 +9,7 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-test.serial('md5 应该正确计算本地文件内容的 XXH32 哈希值', async (t) => {
+test.serial('xxh3 应该正确计算本地文件内容的 XXH32 哈希值', async (t) => {
   const tempFilePath = join(__dirname, 'temp_test_file.txt');
   const fileContent = 'hello world';
   const expected = 'd447b1ea40e6988b';
@@ -19,7 +19,7 @@ test.serial('md5 应该正确计算本地文件内容的 XXH32 哈希值', async
     await writeFile(tempFilePath, fileContent);
 
     // 读取文件内容并计算 XXH32
-    const result = md5(tempFilePath);
+    const result = xxh3(tempFilePath);
     t.is(result, expected);
   } catch (error) {
     t.fail(`测试过程中出现错误: ${error.message}`);

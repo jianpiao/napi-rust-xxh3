@@ -1,4 +1,4 @@
-const { md5 } = require('../index.js');
+const { xxh3 } = require('../index.js');
 const fs = require('fs');
 const path = require('path');
 
@@ -48,7 +48,7 @@ async function testLargeFile() {
     const startTime = process.hrtime.bigint();
     
     try {
-        const hash = md5(testFile);
+        const hash = xxh3(testFile);
         
         const endTime = process.hrtime.bigint();
         const duration = Number(endTime - startTime) / 1000000; // 转换为毫秒

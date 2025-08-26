@@ -73,15 +73,15 @@ function requireNative() {
   } else if (process.platform === 'android') {
     if (process.arch === 'arm64') {
       try {
-        return require('./md5.android-arm64.node')
+        return require('./xxh3.android-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-android-arm64')
-        const bindingPackageVersion = require('@small-zip/md5-android-arm64/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-android-arm64')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-android-arm64/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -89,15 +89,15 @@ function requireNative() {
       }
     } else if (process.arch === 'arm') {
       try {
-        return require('./md5.android-arm-eabi.node')
+        return require('./xxh3.android-arm-eabi.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-android-arm-eabi')
-        const bindingPackageVersion = require('@small-zip/md5-android-arm-eabi/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-android-arm-eabi')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-android-arm-eabi/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -109,15 +109,15 @@ function requireNative() {
   } else if (process.platform === 'win32') {
     if (process.arch === 'x64') {
       try {
-        return require('./md5.win32-x64-msvc.node')
+        return require('./xxh3.win32-x64-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-win32-x64-msvc')
-        const bindingPackageVersion = require('@small-zip/md5-win32-x64-msvc/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-win32-x64-msvc')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-win32-x64-msvc/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -125,15 +125,15 @@ function requireNative() {
       }
     } else if (process.arch === 'ia32') {
       try {
-        return require('./md5.win32-ia32-msvc.node')
+        return require('./xxh3.win32-ia32-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-win32-ia32-msvc')
-        const bindingPackageVersion = require('@small-zip/md5-win32-ia32-msvc/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-win32-ia32-msvc')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-win32-ia32-msvc/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -141,15 +141,15 @@ function requireNative() {
       }
     } else if (process.arch === 'arm64') {
       try {
-        return require('./md5.win32-arm64-msvc.node')
+        return require('./xxh3.win32-arm64-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-win32-arm64-msvc')
-        const bindingPackageVersion = require('@small-zip/md5-win32-arm64-msvc/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-win32-arm64-msvc')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-win32-arm64-msvc/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -160,15 +160,15 @@ function requireNative() {
     }
   } else if (process.platform === 'darwin') {
     try {
-      return require('./md5.darwin-universal.node')
+      return require('./xxh3.darwin-universal.node')
     } catch (e) {
       loadErrors.push(e)
     }
     try {
-      const binding = require('@small-zip/md5-darwin-universal')
-      const bindingPackageVersion = require('@small-zip/md5-darwin-universal/package.json').version
-      if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-        throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+      const binding = require('@small-zip/napi-rust-xxh3-darwin-universal')
+      const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-darwin-universal/package.json').version
+      if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+        throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
       }
       return binding
     } catch (e) {
@@ -176,15 +176,15 @@ function requireNative() {
     }
     if (process.arch === 'x64') {
       try {
-        return require('./md5.darwin-x64.node')
+        return require('./xxh3.darwin-x64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-darwin-x64')
-        const bindingPackageVersion = require('@small-zip/md5-darwin-x64/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-darwin-x64')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-darwin-x64/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -192,15 +192,15 @@ function requireNative() {
       }
     } else if (process.arch === 'arm64') {
       try {
-        return require('./md5.darwin-arm64.node')
+        return require('./xxh3.darwin-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-darwin-arm64')
-        const bindingPackageVersion = require('@small-zip/md5-darwin-arm64/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-darwin-arm64')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-darwin-arm64/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -212,15 +212,15 @@ function requireNative() {
   } else if (process.platform === 'freebsd') {
     if (process.arch === 'x64') {
       try {
-        return require('./md5.freebsd-x64.node')
+        return require('./xxh3.freebsd-x64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-freebsd-x64')
-        const bindingPackageVersion = require('@small-zip/md5-freebsd-x64/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-freebsd-x64')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-freebsd-x64/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -228,15 +228,15 @@ function requireNative() {
       }
     } else if (process.arch === 'arm64') {
       try {
-        return require('./md5.freebsd-arm64.node')
+        return require('./xxh3.freebsd-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-freebsd-arm64')
-        const bindingPackageVersion = require('@small-zip/md5-freebsd-arm64/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-freebsd-arm64')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-freebsd-arm64/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -249,15 +249,15 @@ function requireNative() {
     if (process.arch === 'x64') {
       if (isMusl()) {
         try {
-          return require('./md5.linux-x64-musl.node')
+          return require('./xxh3.linux-x64-musl.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@small-zip/md5-linux-x64-musl')
-          const bindingPackageVersion = require('@small-zip/md5-linux-x64-musl/package.json').version
-          if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@small-zip/napi-rust-xxh3-linux-x64-musl')
+          const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-linux-x64-musl/package.json').version
+          if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -265,15 +265,15 @@ function requireNative() {
         }
       } else {
         try {
-          return require('./md5.linux-x64-gnu.node')
+          return require('./xxh3.linux-x64-gnu.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@small-zip/md5-linux-x64-gnu')
-          const bindingPackageVersion = require('@small-zip/md5-linux-x64-gnu/package.json').version
-          if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@small-zip/napi-rust-xxh3-linux-x64-gnu')
+          const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-linux-x64-gnu/package.json').version
+          if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -283,15 +283,15 @@ function requireNative() {
     } else if (process.arch === 'arm64') {
       if (isMusl()) {
         try {
-          return require('./md5.linux-arm64-musl.node')
+          return require('./xxh3.linux-arm64-musl.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@small-zip/md5-linux-arm64-musl')
-          const bindingPackageVersion = require('@small-zip/md5-linux-arm64-musl/package.json').version
-          if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@small-zip/napi-rust-xxh3-linux-arm64-musl')
+          const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-linux-arm64-musl/package.json').version
+          if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -299,15 +299,15 @@ function requireNative() {
         }
       } else {
         try {
-          return require('./md5.linux-arm64-gnu.node')
+          return require('./xxh3.linux-arm64-gnu.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@small-zip/md5-linux-arm64-gnu')
-          const bindingPackageVersion = require('@small-zip/md5-linux-arm64-gnu/package.json').version
-          if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@small-zip/napi-rust-xxh3-linux-arm64-gnu')
+          const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-linux-arm64-gnu/package.json').version
+          if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -317,15 +317,15 @@ function requireNative() {
     } else if (process.arch === 'arm') {
       if (isMusl()) {
         try {
-          return require('./md5.linux-arm-musleabihf.node')
+          return require('./xxh3.linux-arm-musleabihf.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@small-zip/md5-linux-arm-musleabihf')
-          const bindingPackageVersion = require('@small-zip/md5-linux-arm-musleabihf/package.json').version
-          if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@small-zip/napi-rust-xxh3-linux-arm-musleabihf')
+          const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-linux-arm-musleabihf/package.json').version
+          if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -333,15 +333,15 @@ function requireNative() {
         }
       } else {
         try {
-          return require('./md5.linux-arm-gnueabihf.node')
+          return require('./xxh3.linux-arm-gnueabihf.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@small-zip/md5-linux-arm-gnueabihf')
-          const bindingPackageVersion = require('@small-zip/md5-linux-arm-gnueabihf/package.json').version
-          if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@small-zip/napi-rust-xxh3-linux-arm-gnueabihf')
+          const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-linux-arm-gnueabihf/package.json').version
+          if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -351,15 +351,15 @@ function requireNative() {
     } else if (process.arch === 'riscv64') {
       if (isMusl()) {
         try {
-          return require('./md5.linux-riscv64-musl.node')
+          return require('./xxh3.linux-riscv64-musl.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@small-zip/md5-linux-riscv64-musl')
-          const bindingPackageVersion = require('@small-zip/md5-linux-riscv64-musl/package.json').version
-          if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@small-zip/napi-rust-xxh3-linux-riscv64-musl')
+          const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-linux-riscv64-musl/package.json').version
+          if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -367,15 +367,15 @@ function requireNative() {
         }
       } else {
         try {
-          return require('./md5.linux-riscv64-gnu.node')
+          return require('./xxh3.linux-riscv64-gnu.node')
         } catch (e) {
           loadErrors.push(e)
         }
         try {
-          const binding = require('@small-zip/md5-linux-riscv64-gnu')
-          const bindingPackageVersion = require('@small-zip/md5-linux-riscv64-gnu/package.json').version
-          if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-            throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+          const binding = require('@small-zip/napi-rust-xxh3-linux-riscv64-gnu')
+          const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-linux-riscv64-gnu/package.json').version
+          if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+            throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
           }
           return binding
         } catch (e) {
@@ -384,15 +384,15 @@ function requireNative() {
       }
     } else if (process.arch === 'ppc64') {
       try {
-        return require('./md5.linux-ppc64-gnu.node')
+        return require('./xxh3.linux-ppc64-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-linux-ppc64-gnu')
-        const bindingPackageVersion = require('@small-zip/md5-linux-ppc64-gnu/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-linux-ppc64-gnu')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-linux-ppc64-gnu/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -400,15 +400,15 @@ function requireNative() {
       }
     } else if (process.arch === 's390x') {
       try {
-        return require('./md5.linux-s390x-gnu.node')
+        return require('./xxh3.linux-s390x-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-linux-s390x-gnu')
-        const bindingPackageVersion = require('@small-zip/md5-linux-s390x-gnu/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-linux-s390x-gnu')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-linux-s390x-gnu/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -420,15 +420,15 @@ function requireNative() {
   } else if (process.platform === 'openharmony') {
     if (process.arch === 'arm64') {
       try {
-        return require('./md5.openharmony-arm64.node')
+        return require('./xxh3.openharmony-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-openharmony-arm64')
-        const bindingPackageVersion = require('@small-zip/md5-openharmony-arm64/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-openharmony-arm64')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-openharmony-arm64/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -436,15 +436,15 @@ function requireNative() {
       }
     } else if (process.arch === 'x64') {
       try {
-        return require('./md5.openharmony-x64.node')
+        return require('./xxh3.openharmony-x64.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-openharmony-x64')
-        const bindingPackageVersion = require('@small-zip/md5-openharmony-x64/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-openharmony-x64')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-openharmony-x64/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -452,15 +452,15 @@ function requireNative() {
       }
     } else if (process.arch === 'arm') {
       try {
-        return require('./md5.openharmony-arm.node')
+        return require('./xxh3.openharmony-arm.node')
       } catch (e) {
         loadErrors.push(e)
       }
       try {
-        const binding = require('@small-zip/md5-openharmony-arm')
-        const bindingPackageVersion = require('@small-zip/md5-openharmony-arm/package.json').version
-        if (bindingPackageVersion !== '0.1.0' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
-          throw new Error(`Native binding package version mismatch, expected 0.1.0 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
+        const binding = require('@small-zip/napi-rust-xxh3-openharmony-arm')
+        const bindingPackageVersion = require('@small-zip/napi-rust-xxh3-openharmony-arm/package.json').version
+        if (bindingPackageVersion !== '0.1.2' && process.env.NAPI_RS_ENFORCE_VERSION_CHECK && process.env.NAPI_RS_ENFORCE_VERSION_CHECK !== '0') {
+          throw new Error(`Native binding package version mismatch, expected 0.1.2 but got ${bindingPackageVersion}. You can reinstall dependencies to fix this issue.`)
         }
         return binding
       } catch (e) {
@@ -478,7 +478,7 @@ nativeBinding = requireNative()
 
 if (!nativeBinding || process.env.NAPI_RS_FORCE_WASI) {
   try {
-    nativeBinding = require('./md5.wasi.cjs')
+    nativeBinding = require('./xxh3.wasi.cjs')
   } catch (err) {
     if (process.env.NAPI_RS_FORCE_WASI) {
       loadErrors.push(err)
@@ -486,7 +486,7 @@ if (!nativeBinding || process.env.NAPI_RS_FORCE_WASI) {
   }
   if (!nativeBinding) {
     try {
-      nativeBinding = require('@small-zip/md5-wasm32-wasi')
+      nativeBinding = require('@small-zip/napi-rust-xxh3-wasm32-wasi')
     } catch (err) {
       if (process.env.NAPI_RS_FORCE_WASI) {
         loadErrors.push(err)
@@ -508,4 +508,4 @@ if (!nativeBinding) {
 }
 
 module.exports = nativeBinding
-module.exports.md5 = nativeBinding.md5
+module.exports.xxh3 = nativeBinding.xxh3

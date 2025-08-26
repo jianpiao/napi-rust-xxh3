@@ -1,10 +1,10 @@
 {
-  "name": "@small-zip/md5",
-  "version": "0.1.1",
+  "name": "@small-zip/napi-rust-xxh3",
+  "version": "0.1.2",
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
-    "binaryName": "md5",
+    "binaryName": "xxh3",
     "targets": [
       "aarch64-apple-darwin",
       "aarch64-pc-windows-msvc",
@@ -15,7 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "@napi-rs/cli": "^3.1.5",
-    "ava": "^6.0.1"
+    "ava": "6.4.1"
   },
   "ava": {
     "timeout": "3m"
@@ -32,6 +32,12 @@
     "universal": "napi universal",
     "version": "napi version"
   },
-  "description": "rust生成md5值",
-  "repository": "https://github.com/jianpiao/rust-md5"
+  "description": "rust生成xxh3值",
+  "repository": "https://github.com/jianpiao/rust-xxh3",
+  "optionalDependencies": {
+    "@small-zip/napi-rust-xxh3-darwin-arm64": "0.1.1",
+    "@small-zip/napi-rust-xxh3-win32-arm64-msvc": "0.1.1",
+    "@small-zip/napi-rust-xxh3-linux-x64-musl": "0.1.1",
+    "@small-zip/napi-rust-xxh3-win32-ia32-msvc": "0.1.1"
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@small-zip/md5-win32-x64-msvc",
+  "name": "@small-zip/xxh3-win32-x64-msvc",
   "version": "0.0.16",
   "os": [
     "win32"
@@ -7,14 +7,14 @@
   "cpu": [
     "x64"
   ],
-  "main": "md5.win32-x64-msvc.node",
+  "main": "xxh3.win32-x64-msvc.node",
   "files": [
-    "md5.win32-x64-msvc.node"
+    "xxh3.win32-x64-msvc.node"
   ],
-  "description": "rust生成md5值",
+  "description": "rust生成xxh3值",  
   "license": "MIT",
   "engines": {
     "node": ">= 10"
   },
-  "repository": "https://github.com/jianpiao/rust-md5"
+  "repository": "https://github.com/jianpiao/napi-rust-xxh3"
 }
