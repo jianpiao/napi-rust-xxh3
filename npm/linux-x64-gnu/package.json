@@ -1,0 +1,23 @@
+{
+  "name": "@small-zip/md5-linux-x64-gnu",
+  "version": "0.0.16",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "md5.linux-x64-gnu.node",
+  "files": [
+    "md5.linux-x64-gnu.node"
+  ],
+  "description": "rust生成md5值",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "repository": "https://github.com/jianpiao/rust-md5",
+  "libc": [
+    "glibc"
+  ]
+}

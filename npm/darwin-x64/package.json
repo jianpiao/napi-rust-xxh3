@@ -1,0 +1,20 @@
+{
+  "name": "@small-zip/md5-darwin-x64",
+  "version": "0.0.16",
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "md5.darwin-x64.node",
+  "files": [
+    "md5.darwin-x64.node"
+  ],
+  "description": "rust生成md5值",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "repository": "https://github.com/jianpiao/rust-md5"
+}
