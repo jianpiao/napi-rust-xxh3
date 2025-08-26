@@ -11,8 +11,10 @@
   "files": [
     "xxh3.win32-ia32-msvc.node"
   ],
+  "description": "rust生成xxh3值",
   "license": "MIT",
   "engines": {
     "node": ">= 10"
-  }
+  },
+  "repository": "https://github.com/jianpiao/napi-rust-xxh3"
 }

@@ -11,8 +11,10 @@
   "files": [
     "xxh3.darwin-x64.node"
   ],
+  "description": "rust生成xxh3值",
   "license": "MIT",
   "engines": {
     "node": ">= 10"
-  }
+  },
+  "repository": "https://github.com/jianpiao/napi-rust-xxh3"
 }
