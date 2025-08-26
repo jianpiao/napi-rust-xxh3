@@ -1,6 +1,6 @@
 {
   "name": "@small-zip/xxh3-win32-x64-msvc",
-  "version": "0.0.16",
+  "version": "0.1.3",
   "os": [
     "win32"
   ],
@@ -11,7 +11,7 @@
   "files": [
     "xxh3.win32-x64-msvc.node"
   ],
-  "description": "rust生成xxh3值",  
+  "description": "rust生成xxh3值",
   "license": "MIT",
   "engines": {
     "node": ">= 10"
