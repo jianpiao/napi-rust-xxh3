@@ -16,5 +16,8 @@
   "engines": {
     "node": ">= 10"
   },
-  "repository": "https://github.com/jianpiao/napi-rust-xxh3"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jianpiao/napi-rust-xxh3"
+  }
 }
