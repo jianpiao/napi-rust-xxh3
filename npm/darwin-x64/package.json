@@ -1,6 +1,6 @@
 {
   "name": "@small-zip/xxh3-darwin-x64",
-  "version": "0.0.0",
+  "version": "0.1.4",
   "os": [
     "darwin"
   ],
