@@ -1,4 +1,4 @@
-# @small-zip/napi-rust-xxh3
+# @small-zip/xxh3
 
 这是一个使用 Rust 编写的 XXH3 生成工具，通过 NAPI-RS 与 Node.js 进行绑定，支持多种操作系统和架构。
 
@@ -14,12 +14,12 @@
 
 ## 安装
 ```bash
-npm install @small-zip/napi-rust-xxh3
+npm install @small-zip/xxh3
 ```
 
 ## 使用示例
 ```javascript
-const xxh3 = require('@small-zip/napi-rust-xxh3');
+const xxh3 = require('@small-zip/xxh3');
 const filePath = 'path/to/your/file';
 const hash = xxh3.xxh3(filePath);
 console.log(`XXH3 hash of ${filePath}: ${hash}`); 
